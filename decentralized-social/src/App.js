@@ -9,6 +9,7 @@ import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
 import { Box, Button, Image } from "@chakra-ui/react";
 import { WorldIDWidget } from '@worldcoin/id'
+import { visit } from "graphql";
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -80,7 +81,7 @@ function App() {
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          width="55%"
+          width="80%"
           margin="auto"
           color="white"
           padding="10px 0"
@@ -95,7 +96,13 @@ function App() {
             </Box>
             <Box> Decentralized Social Media App</Box>
           </Box>
-          
+          <Button
+              onClick={event => window.location.replace('http://xmtp.vercel.app')}
+              color="rgba(5,32,64)"
+              _hover={{ backgroundColor: "#808080" }}
+            >
+              Chat
+            </Button>
           <Box>
           <WorldIDWidget
             actionId="wid_staging_2703190b67977db2eb8258018b1510e4" // obtain this from developer.worldcoin.org
