@@ -10,6 +10,8 @@ import { ethers } from "ethers";
 import { Box, Button, Image } from "@chakra-ui/react";
 import { WorldIDWidget } from '@worldcoin/id'
 import { visit } from "graphql";
+import { Client } from '@xmtp/xmtp-js'
+import { Wallet } from 'ethers'
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -24,6 +26,13 @@ function App() {
       method: "eth_requestAccounts",
     });
     setAccount(accounts[0]);
+  }
+
+  async function chat() {
+    const account = await Client.account
+    const conversation = await Client.xmtp.conversations
+    // Load all messages in the conversation
+    const messages = await conversation.messages()
   }
 
   async function getRecommendedProfiles() {
