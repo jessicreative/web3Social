@@ -91,13 +91,6 @@ function App() {
           color="black"
           padding="10px 0"
         >
-          <Button
-              onClick={event => window.location.replace('http://xmtp.vercel.app')}
-              color="rgba(5,32,64)"
-              _hover={{ backgroundColor: "#808080" }}
-            >
-            Chat
-          </Button>
 
           <Box>
             <Box
@@ -159,7 +152,7 @@ function App() {
             >
               <Box display="flex">
                 {/* PROFILE IMAGE */}
-                <Box width="75px" height="75px" marginTop="8px">
+                {/* <Box width="75px" height="75px" marginTop="8px">
                   <img
                     alt="profile"
                     src={parseImageUrl(post.profile)}
@@ -170,7 +163,7 @@ function App() {
                       currentTarget.src = "/default-avatar.png";
                     }}
                   />
-                </Box>
+                </Box> */}
 
                 {/* POST CONTENT */}
                 <Box flexGrow={1} marginLeft="20px">
@@ -181,9 +174,13 @@ function App() {
                     <Box width="10">
                       Vote
                     </Box>
-                    <Box width="50">
+                    <Button
+                        onClick={event => window.location.replace('http://xmtp.vercel.app')}
+                        backgroundColor={"rgb(250,240,230)"}
+                        _hover={{ backgroundColor: "#f5deb3" }}
+                      >
                       Chat
-                    </Box>
+                    </Button>
                   </Box>
                   <Box overflowWrap="anywhere" fontSize="14px">
                     {post.metadata?.content}
