@@ -140,18 +140,21 @@ function App() {
         display="flex"
         justifyContent="space-between"
         width="75%"
-        margin="55px"
+        margin="85px"
         color="black"
       >
         {/* POSTS */}
-        <Box width="60%" maxWidth="65%" minWidth="65%">
+        <Box width = "10px">
+        </Box>
+        <Box width="80%" maxWidth="65%" minWidth="65%">
           {posts.map((post) => (
             <Box
+              width="100%"
               key={post.id}
               marginBottom="25px"
               backgroundColor="rgb(255,235,205)"
               padding="40px 30px 40px 25px"
-              borderRadius="10px"
+              borderRadius="50px"
             >
               <Box display="flex">
                 {/* PROFILE IMAGE */}
@@ -186,8 +189,9 @@ function App() {
             </Box>
           ))}
         </Box>
-
-        {/* favorite */}
+        <Box width = "5px">
+        </Box>
+        {/* favorite
         <Box
           width="50%"
           backgroundColor="rgb(227,218,201)"
@@ -224,7 +228,7 @@ function App() {
               </Box>
             ))}
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </div>
   );
