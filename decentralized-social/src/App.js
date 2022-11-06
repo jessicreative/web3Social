@@ -96,8 +96,6 @@ function App() {
             Chat
           </Button>
 
-          
-
           <Box>
             <Box
               fontFamily="DM Serif Display"
@@ -177,8 +175,11 @@ function App() {
                     <Box fontFamily="DM Serif Display" fontSize="24px">
                       {post.profile?.handle}
                     </Box>
-                    <Box>
+                    <Box width="10">
                       Vote
+                    </Box>
+                    <Box width="50">
+                      Chat
                     </Box>
                   </Box>
                   <Box overflowWrap="anywhere" fontSize="14px">
