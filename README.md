@@ -22,5 +22,5 @@ We address these with three prominent features: First, the project implements Pr
 Backend API: Lens API (user database), IFPS (for storage of media)
 
 <picture>
-  <img src="https://github.com/jessicreative/web3Social/blob/main/Dora_UI.png" width="500px">
+  <img src="https://github.com/jessicreative/web3Social/blob/main/Dora_UI.png">
 </picture>
