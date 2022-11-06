@@ -464,3 +464,9 @@ query ExplorePublications {
     }
   }  
 `
+
+export const upvote = `
+mutation AddReaction {
+    addReaction(request: { profileId: "0x01", reaction: "UPVOTE", publicationId: "0x02-0x01" })
+  }
+`

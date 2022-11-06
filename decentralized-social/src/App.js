@@ -4,6 +4,7 @@ import {
   LENS_HUB_CONTRACT_ADDRESS,
   queryRecommendedProfiles,
   queryExplorePublications,
+  upvote,
 } from "./queries";
 import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
@@ -12,6 +13,7 @@ import { WorldIDWidget } from '@worldcoin/id'
 import { visit } from "graphql";
 import { Client } from '@xmtp/xmtp-js'
 import { Wallet } from 'ethers'
+import { IconButton } from '@chakra-ui/react'
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -41,6 +43,16 @@ function App() {
       .toPromise();
     const profiles = response.data.recommendedProfiles.slice(0, 5);
     setProfiles(profiles);
+  }
+
+  async function upvote() {
+    if (verified == true) {
+      const response = await urlClient
+      .query(upvote)
+      .toPromise();
+      console.log("voted")
+    }
+    console.log("not verified for voting")
   }
 
   async function getPosts() {
@@ -180,9 +192,17 @@ function App() {
                     <Box fontFamily="DM Serif Display" fontSize="24px">
                       {post.profile?.handle}
                     </Box>
-                    <Box width="10">
-                      Vote
+                    <Box>
                     </Box>
+                    <Box>
+                    </Box>
+                    <Button
+                        onClick={upvote}
+                        backgroundColor={"rgb(250,240,230)"}
+                        _hover={{ backgroundColor: "#f5deb3" }}
+                      >
+                      Vote
+                    </Button>
                     <Button
                         onClick={event => window.location.replace('http://xmtp.vercel.app')}
                         backgroundColor={"rgb(250,240,230)"}
