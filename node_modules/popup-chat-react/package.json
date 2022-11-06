@@ -1,0 +1,53 @@
+{
+  "name": "popup-chat-react",
+  "version": "1.0.5",
+  "description": "popup-chat-react React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component --copy-files",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "lint": "eslint src demo/src",
+    "start": "nwb serve-react-demo",
+    "gh:publish": "nwb build-demo && gh-pages -d demo/dist"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "emoji-js": "^3.5.0",
+    "gh-pages": "^3.1.0",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.27.1",
+    "react-highlight.js": "^1.0.7",
+    "react-linkify": "^1.0.0-alpha",
+    "socket.io-client": "^3.0.3"
+  },
+  "peerDependencies": {
+    "react": "17.x"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.21.5",
+    "nwb": "^0.25.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "author": "asliddinusmonov",
+  "homepage": "https://github.com/asliddinusmonov/popup-chat-react",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asliddinusmonov/popup-chat-react"
+  },
+  "keywords": [
+    "react-popup",
+    "react-chat",
+    "popup-chat-react"
+  ]
+}

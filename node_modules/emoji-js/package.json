@@ -1,0 +1,48 @@
+{
+  "name": "emoji-js",
+  "version": "3.7.0",
+  "description": "A JS Emoji conversion library",
+  "main": "lib/emoji.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGES.md",
+    "lib"
+  ],
+  "dependencies": {
+    "emoji-datasource": "7.0.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "~3.7",
+    "karma": "~6.3",
+    "karma-coverage": "~2.0",
+    "karma-jasmine": "~4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "puppeteer": "~9.1.1",
+    "karma-story-reporter": "^0.3.1",
+    "uglify-js": "^3.13.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamcal/js-emoji.git"
+  },
+  "keywords": [
+    "emoji",
+    "emoticon",
+    "mobile",
+    "browser"
+  ],
+  "author": "Cal Henderson <cal@iamcal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamcal/js-emoji/issues"
+  },
+  "homepage": "https://github.com/iamcal/js-emoji",
+  "scripts": {
+    "compile": "php build/build.php > lib/emoji.js",
+    "uglify": "echo \"/* $(npm -s run env echo '$npm_package_name') $(date +%Y-%m-%d) */\" > lib/emoji.min.js; ./node_modules/.bin/uglifyjs -c -m -- lib/emoji.js >> lib/emoji.min.js",
+    "test": "./node_modules/.bin/karma start karma.conf.js --single-run --log-level error",
+    "coverage": "./node_modules/.bin/karma start karma-cover.conf.js --single-run --log-level disable",
+    "build": "npm run compile && npm run uglify && npm run test && npm run coverage"
+  }
+}

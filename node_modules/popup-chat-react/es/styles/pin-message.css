@@ -1,0 +1,24 @@
+.sc-pin--message {
+  display: flex;
+  padding: 5px;
+  background-color: #f4f7f9;
+  cursor: pointer;
+}
+
+.sc-pin--message--img {
+  border-radius: 15px;
+  align-self: center;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+}
+
+.sc-pin--message--desc {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.sc-pin--message--title {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
