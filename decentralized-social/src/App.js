@@ -88,6 +88,16 @@ function App() {
           color="black"
           padding="10px 0"
         >
+          <Button
+              onClick={event => window.location.replace('http://xmtp.vercel.app')}
+              color="rgba(5,32,64)"
+              _hover={{ backgroundColor: "#808080" }}
+            >
+            Chat
+          </Button>
+
+          
+
           <Box>
             <Box
               fontFamily="DM Serif Display"
@@ -99,13 +109,6 @@ function App() {
             <Box> Seek the Truths </Box>
           </Box>
 
-          <Button
-              onClick={event => window.location.replace('http://xmtp.vercel.app')}
-              color="rgba(5,32,64)"
-              _hover={{ backgroundColor: "#808080" }}
-            >
-              Chat
-            </Button>
           <Box>
           <WorldIDWidget
             actionId="wid_staging_2703190b67977db2eb8258018b1510e4" // obtain this from developer.worldcoin.org
@@ -115,22 +118,7 @@ function App() {
             onError={(error) => console.error(error)}
           />
           </Box>
-          <Button
-              onClick={event => window.location.replace('http://xmtp.vercel.app')}
-              color="rgba(5,32,64)"
-              _hover={{ backgroundColor: "#808080" }}
-            >
-              Chat
-            </Button>
-          <Box>
-          <WorldIDWidget
-            actionId="wid_staging_2703190b67977db2eb8258018b1510e4" // obtain this from developer.worldcoin.org
-            signal="my_signal"
-            enableTelemetry
-            onSuccess={(verificationResponse) => console.log(verificationResponse)} // you'll actually want to pass the proof to the API or your smart contract
-            onError={(error) => console.error(error)}
-          />
-          </Box>
+          
           {account ? (
             <Box backgroundColor="#000" padding="15px" borderRadius="6px">
               Connected
