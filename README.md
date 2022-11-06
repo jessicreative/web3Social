@@ -1,0 +1,1 @@
+This is the decentralized social app mock-up
