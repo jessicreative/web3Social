@@ -8,6 +8,7 @@ import {
 import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
 import { Box, Button, Image } from "@chakra-ui/react";
+import { WorldIDWidget } from '@worldcoin/id'
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -93,6 +94,16 @@ function App() {
               DECENTRA
             </Box>
             <Box> Decentralized Social Media App</Box>
+          </Box>
+          
+          <Box>
+          <WorldIDWidget
+            actionId="wid_staging_2703190b67977db2eb8258018b1510e4" // obtain this from developer.worldcoin.org
+            signal="my_signal"
+            enableTelemetry
+            onSuccess={(verificationResponse) => console.log(verificationResponse)} // you'll actually want to pass the proof to the API or your smart contract
+            onError={(error) => console.error(error)}
+          />
           </Box>
           {account ? (
             <Box backgroundColor="#000" padding="15px" borderRadius="6px">
