@@ -20,3 +20,7 @@ We address these with three prominent features: First, the project implements Pr
 - Authentications: Worldcoin, Walletconnect, Web3Auth; specifically, Worldcoin helps guarantee the unique identity of the user on the platform
 - XMTP protocol-based chat features to facilitate direct discussion between community members
 Backend API: Lens API (user database), IFPS (for storage of media)
+
+<picture>
+  <img src="https://github.com/jessicreative/web3Social/blob/main/Dora_UI.png" width="500px">
+</picture>
