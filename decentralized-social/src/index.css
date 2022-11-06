@@ -13,7 +13,7 @@ img {
 }
 
 .app {
-  background: url("./gradient-background.png") no-repeat center center fixed;
+  background: white;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-webkit-background-size: cover;

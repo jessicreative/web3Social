@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import {
   urlClient,
   LENS_HUB_CONTRACT_ADDRESS,
@@ -8,6 +8,7 @@ import {
 import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
 import { Box, Button, Image } from "@chakra-ui/react";
+import TextField from "@mui/material/TextField";
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -72,27 +73,29 @@ function App() {
   };
 
   return (
+    
     <div className="app">
+
       {/* NAVBAR */}
-      <Box width="100%" backgroundColor="rgba(5, 32, 64, 28)">
+      <Box width="100%" backgroundColor="rgb(250,240,230)">
         <Box
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          width="55%"
+          width="95%"
           margin="auto"
-          color="white"
+          color="black"
           padding="10px 0"
         >
           <Box>
             <Box
               fontFamily="DM Serif Display"
-              fontSize="44px"
+              fontSize="45px"
               fontStyle="italic"
             >
-              DECENTRA
+              Dora
             </Box>
-            <Box> Decentralized Social Media App</Box>
+            <Box> Seek the Truths </Box>
           </Box>
           {account ? (
             <Box backgroundColor="#000" padding="15px" borderRadius="6px">
@@ -114,19 +117,19 @@ function App() {
       <Box
         display="flex"
         justifyContent="space-between"
-        width="55%"
-        margin="35px auto auto auto"
-        color="white"
+        width="75%"
+        margin="55px"
+        color="black"
       >
         {/* POSTS */}
-        <Box width="65%" maxWidth="65%" minWidth="65%">
+        <Box width="60%" maxWidth="65%" minWidth="65%">
           {posts.map((post) => (
             <Box
               key={post.id}
               marginBottom="25px"
-              backgroundColor="rgba(5, 32, 64, 28)"
+              backgroundColor="rgb(255,235,205)"
               padding="40px 30px 40px 25px"
-              borderRadius="6px"
+              borderRadius="10px"
             >
               <Box display="flex">
                 {/* PROFILE IMAGE */}
@@ -149,14 +152,8 @@ function App() {
                     <Box fontFamily="DM Serif Display" fontSize="24px">
                       {post.profile?.handle}
                     </Box>
-                    <Box height="50px" _hover={{ cursor: "pointer" }}>
-                      <Image
-                        alt="follow-icon"
-                        src="/follow-icon.png"
-                        width="50px"
-                        height="50px"
-                        onClick={() => follow(post.id)}
-                      />
+                    <Box>
+                      Vote
                     </Box>
                   </Box>
                   <Box overflowWrap="anywhere" fontSize="14px">
@@ -168,15 +165,16 @@ function App() {
           ))}
         </Box>
 
-        {/* FRIEND SUGGESTIONS */}
+        {/* favorite */}
         <Box
-          width="30%"
-          backgroundColor="rgba(5, 32, 64, 28)"
+          width="50%"
+          backgroundColor="rgb(227,218,201)"
           padding="40px 25px"
-          borderRadius="6px"
+          borderRadius="20px"
           height="fit-content"
+          justifyContent="space-between"
         >
-          <Box fontFamily="DM Serif Display">FRIEND SUGGESTIONS</Box>
+          <Box fontFamily="DM Serif Display">Favorites</Box>
           <Box>
             {profiles.map((profile, i) => (
               <Box
