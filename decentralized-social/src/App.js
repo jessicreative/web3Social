@@ -14,6 +14,7 @@ import { visit } from "graphql";
 function App() {
   const [account, setAccount] = useState(null);
   const [profiles, setProfiles] = useState([]);
+  const [verified, setVerified] = useState(false);
   console.log('~ profiles', profiles)
   const [posts, setPosts] = useState([]);
   console.log('~ posts', posts)
@@ -116,7 +117,7 @@ function App() {
             actionId="wid_staging_2703190b67977db2eb8258018b1510e4" // obtain this from developer.worldcoin.org
             signal="my_signal"
             enableTelemetry
-            onSuccess={(verificationResponse) => console.log(verificationResponse)} // you'll actually want to pass the proof to the API or your smart contract
+            onSuccess={(verificationResponse) => setVerified(true)} // you'll actually want to pass the proof to the API or your smart contract
             onError={(error) => console.error(error)}
           />
           </Box>
