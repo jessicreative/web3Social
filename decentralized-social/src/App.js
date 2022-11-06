@@ -14,7 +14,9 @@ import { visit } from "graphql";
 function App() {
   const [account, setAccount] = useState(null);
   const [profiles, setProfiles] = useState([]);
+  console.log('~ profiles', profiles)
   const [posts, setPosts] = useState([]);
+  console.log('~ posts', posts)
 
   async function signIn() {
     const accounts = await window.ethereum.request({

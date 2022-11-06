@@ -95,7 +95,7 @@ query RecommendedProfiles {
 export const queryExplorePublications = `
 query ExplorePublications {
     explorePublications(request: {
-      sortCriteria: TOP_COMMENTED,
+      sortCriteria: LATEST,
       publicationTypes: [POST, COMMENT, MIRROR],
       limit: 10
     }) {
@@ -451,7 +451,7 @@ query ExplorePublications {
       contractAddress
     }
     ... on UnknownReferenceModuleSettings {
-      type
+      type 
       contractAddress
       referenceModuleReturnData
     }
