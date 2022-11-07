@@ -4,6 +4,8 @@
   <img src="https://github.com/jessicreative/web3Social/blob/main/Screen%20Shot%202022-11-06%20at%203.49.33%20AM.png" width="500px">
 </picture>
 
+[ETH San Francisco 2022 Project Page - Dora](https://ethglobal.com/showcase/dora-4nurr)
+
 ## Project Description
 
 An entire industry of hiring spambots and paying for fake reviews by fake accounts intends to trick social media users into believing in a version of reality not supported by facts. Especially with social platforms with more seemingly personal anecdotes and interpersonal connections, the unsuspecting users are even more vulnerable to a message and ten comments by fake accounts underneath that “verifies” the truth and effectiveness of the statement.
